@@ -1,16 +1,17 @@
 <ion-navbar *navbar>
   <ion-title>
-    Home
+    BACK 2 DA FUTURE
   </ion-title>
 </ion-navbar>
 
 <ion-content class="home">
   <ion-card>
     <ion-card-header>
-      Card Header
+     {{cardTitle}}
     </ion-card-header>
     <ion-card-content>
-      Hello World
+      {{currentTime}}
     </ion-card-content>
+      <button (click)="timeTravelBtn()" class="button">GO DOC!</button>
   </ion-card>
 </ion-content>
