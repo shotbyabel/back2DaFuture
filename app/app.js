@@ -13,7 +13,7 @@ export class MyApp {
   }
 
   constructor(platform) {
-    this.rootPage = HomePage;
+    this.rootPage = HomePage;//HomePage is defined in home.js (export class)
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
