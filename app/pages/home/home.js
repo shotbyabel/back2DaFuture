@@ -1,8 +1,10 @@
 import {Page} from 'ionic-angular';
+import {adTime} from '../../pipes/mypipe';
 
 
 @Page({
-  templateUrl: 'build/pages/home/home.html'
+  templateUrl: 'build/pages/home/home.html',
+  pipes: [adTime]
 })
 
 export class HomePage {//HomePage is in our app.js constructor

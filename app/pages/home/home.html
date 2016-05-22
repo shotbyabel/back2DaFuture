@@ -10,7 +10,7 @@
      {{cardTitle}}
     </ion-card-header>
     <ion-card-content>
-      {{currentTime}}
+      {{currentTime | adTime}}
     </ion-card-content>
       <button (click)="timeTravelBtn()" class="button">GO DOC!</button>
   </ion-card>
