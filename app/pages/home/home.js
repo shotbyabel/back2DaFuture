@@ -1,4 +1,5 @@
-import {Page} from 'ionic-angular';
+import {Page, NavController} from 'ionic-angular';//imported NavController login-success
+import {LoginSucessPage} from '../login-sucess/login-sucess'
 import {adTime} from '../../pipes/mypipe';
 
 
@@ -8,10 +9,22 @@ import {adTime} from '../../pipes/mypipe';
 })
 
 export class HomePage {//HomePage is in our app.js constructor
-  constructor() {
+  ///***
+  static get parameters () {
+    return[[NavController]];
+  }
+
+  constructor(nav) {
     //1.
     this.currentTime = new Date().getFullYear();
     this.setTitleText();
+
+    this.nav = nav;
+  }
+
+  ///***login event handler to navigate 
+  login() {
+    this.nav.push(LoginSucessPage);
   }
 
 
