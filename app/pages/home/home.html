@@ -1,7 +1,13 @@
-<ion-navbar *navbar>
+<ion-navbar *navbar abelTwo>
+
   <ion-title>
     BACK 2 DA FUTURE
   </ion-title>
+
+  <ion-buttons end>
+    <button>add</button>
+  </ion-buttons>
+
 </ion-navbar>
 
 <ion-content class="home">
@@ -13,5 +19,24 @@
       {{currentTime | adTime}}
     </ion-card-content>
       <button (click)="timeTravelBtn()" class="button">GO DOC!</button>
+      <br>
+      <button secondary>NEW BTN</button>
   </ion-card>
+<!--  LIST -->
+<ion-list>
+
+  <ion-item>
+    <ion-input type="text" placeholder="your name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" placeholder="your password"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<div class="btn-center">
+  <button id="login-btn" (click)="login()"favorite>LOG IN!</button>
+</div>
+
 </ion-content>

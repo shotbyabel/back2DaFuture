@@ -31,5 +31,21 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  favorite:   #69BB7B
+  favorite:   #69BB7B,
+  abelOne:    #DAFF88,
+  abelTwo:    #FF7B58,
+  abelThree:  #556270
 );
+
+//global SASS Variable
+// $list-background-color: #DB9DD4;
+
+//custom SASS variable
+
+$my-medBtn: 60vw; //view width
+
+//Size Variables
+$my-input-width: 90%;
+$my-input-height: 55px;
+
+//END - Size Variables
