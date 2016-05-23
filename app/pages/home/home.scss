@@ -1,3 +1,20 @@
 .home {
+
   
+}
+
+// .btn-center{
+//   margin: 0 auto;
+//   text-align: center;
+// }
+
+button#login-btn {
+  width: $my-medBtn;
+    // border: 2px solid;
+    border-radius: 25px;
+}
+
+ion-input {
+width: $my-input-width;
+height: $my-input-height;
 }
