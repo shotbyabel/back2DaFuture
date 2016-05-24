@@ -1,4 +1,4 @@
-import {Page, NavController} from 'ionic-angular';
+import {Page, NavController, NavParams} from 'ionic-angular';
 
 /*
   Generated class for the LoginSucessPage page.
@@ -11,15 +11,17 @@ import {Page, NavController} from 'ionic-angular';
 })
 export class LoginSucessPage {
   static get parameters() {
-    return [[NavController]];
+    return [[NavController], [NavParams]];
   }
 
-  constructor(nav) {
+  constructor(nav, navParams) {
     this.nav = nav;
+    this.navParams = navParams;//make them available to class
+    this.btnText = this.navParams.get('myString');
   }
 
-  // goBack() {
-  //   this.nav.pop();
-  // }
+  goBack() {
+    this.nav.pop();
+  }
 
 }
