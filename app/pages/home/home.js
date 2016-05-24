@@ -24,7 +24,9 @@ export class HomePage {//HomePage is in our app.js constructor
 
   ///***login event handler to navigate 
   login() {
-    this.nav.push(LoginSucessPage);
+    this.nav.push(LoginSucessPage, {
+      myString: "Abel works!"
+    });
   }
 
 
