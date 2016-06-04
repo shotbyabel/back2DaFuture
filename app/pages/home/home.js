@@ -1,5 +1,6 @@
-import {Page, NavController} from 'ionic-angular';//imported NavController login-success
-import {LoginSucessPage} from '../login-sucess/login-sucess'
+import {Page, NavController, Modal} from 'ionic-angular';//imported NavController login-success
+import {LoginSucessPage} from '../login-sucess/login-sucess';
+import {ModalLoginInfoPage} from '../modal-login-info/modal-login-info';
 import {adTime} from '../../pipes/mypipe';
 
 
@@ -25,8 +26,21 @@ export class HomePage {//HomePage is in our app.js constructor
   ///***login event handler to navigate 
   login() {
     this.nav.push(LoginSucessPage, {
+      //passing data as a string
       myString: "Abel works!"
     });
+  }
+
+  //**modal show button
+  loginModalInfo() {
+    let modalPage = Modal.create(ModalLoginInfoPage);
+    //PASSING DATA from Modal.. after close
+    modalPage.onDismiss(data => {
+      this.receivedData = data.dataOne; //binding to home.html string from modal-login-info.js
+    });
+
+
+    this.nav.present(modalPage);
   }
 
 
@@ -40,7 +54,7 @@ export class HomePage {//HomePage is in our app.js constructor
   getRandomYear(min, max) {
     //Math.Random function will give # between 1-10 in order to get it btween 1200 n 2100 we need to multiply it
     //for this to work we need to RETURN it! 
-    return Math.floor(Math.random() * (max - min +1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   setTitleText() {
