@@ -15,13 +15,13 @@ export class LoginSucessPage {
   }
 
   constructor(nav, navParams) {
-    this.nav = nav;
+    this.nav = navModal;
     this.navParams = navParams;//make them available to class
     this.btnText = this.navParams.get('myString');
   }
 
   goBack() {
-    this.nav.pop();
+    this.navModal.pop();
   }
 
 }
