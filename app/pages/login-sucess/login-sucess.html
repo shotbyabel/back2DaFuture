@@ -10,7 +10,26 @@
 
 <ion-content padding class="login-sucess">
 
-  <p>SUCCESSFUL LOGIN!</p>
-    <button (click)="goBack()">{{btnText}}</button>
-  
+  <p>Login was a success!</p>
+    
+   <!--  I O N - IMAGE S L I D E -->
+
+<ion-slides pager>
+  <ion-slide>
+    <img src="images/est1.jpg"/>
+  </ion-slide>
+  <ion-slide>
+    <img src="images/est2.jpg"/>
+  </ion-slide>
+  <ion-slide>
+    <ion-row>
+      <ion-col>
+        <button (click)="goBack()">{{btnText}}</button>
+      </ion-col>
+     </ion-row>
+   <ion-col>     
+    <img src="images/est3.jpg"/>
+   </ion-col> 
+  </ion-slide>    
+</ion-slides>
 </ion-content>
