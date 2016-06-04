@@ -1,6 +1,7 @@
-import {Page, NavController, Modal} from 'ionic-angular';//imported NavController login-success
+import {Page, NavController, Modal, Storage, LocalStorage} from 'ionic-angular';//imported NavController login-success
 import {LoginSucessPage} from '../login-sucess/login-sucess';
 import {ModalLoginInfoPage} from '../modal-login-info/modal-login-info';
+import {HomeListPage} from '../home-list/home-list';
 import {adTime} from '../../pipes/mypipe';
 
 
@@ -19,8 +20,19 @@ export class HomePage {//HomePage is in our app.js constructor
     //1.
     this.currentTime = new Date().getFullYear();
     this.setTitleText();
-
     this.nav = nav;
+    //local storage
+    this.local = new Storage(LocalStorage);
+
+    this.local.set('myVarName', "Abel's here yo!");
+  }
+
+  //get data back from LocalStorage
+  printStoredData(){
+    this.local.get('myVarName').then((result) => {
+      console.log(result);
+    });
+
   }
 
   ///***login event handler to navigate 
@@ -41,6 +53,13 @@ export class HomePage {//HomePage is in our app.js constructor
 
 
     this.nav.present(modalPage);
+  }
+
+  //go to the Home-List view
+
+    goList(){
+      this.nav.push(HomeListPage);
+    
   }
 
 
